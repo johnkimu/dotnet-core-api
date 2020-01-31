@@ -23,7 +23,8 @@ steps:
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
-displayName: 'dotnet publish --configuration $(buildConfiguration) --out $(Build.ArtifactStagingDirectory)'
+displayName: dotnet publish backend --configuration $(buildConfiguration)
+name: PublishBackendProject
   inputs:
     command: publish
     publishWebProjects: false
